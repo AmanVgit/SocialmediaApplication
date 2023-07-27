@@ -1,0 +1,40 @@
+.ProfileSide{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    overflow: auto;
+}
+
+
+/* Styles for small screens */
+@media screen and (max-width: 768px) {
+  .ProfileSide {
+    /* To stack the elements vertically */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Styles for the Toggle Profile button */
+  .toggleProfileBtn {
+    padding: 8px 16px;
+    background-color: #f99827;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  /* Show the button initially on mobile view */
+  .collapsed-container {
+    display: none;
+  }
+
+  /* Show collapsed components when 'showCollapsed' state is 'true' on mobile view */
+  .ProfileSide.show-collapsed .collapsed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

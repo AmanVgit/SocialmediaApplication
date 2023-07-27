@@ -1,0 +1,19 @@
+/* Common styles for all screens */
+.Home {
+    position: relative;
+    display: grid;
+    grid-template-columns: 18rem auto 20rem;
+    gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    /* For screens with a maximum width of 768px or smaller */
+    .Home {
+        grid-template-columns: auto; /* Set the columns to adjust automatically */
+        grid-template-areas:
+            "left"
+            "main"
+            "right";
+    }
+}
