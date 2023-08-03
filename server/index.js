@@ -2,7 +2,7 @@ import express from 'express';
 import * as dotenv from 'dotenv';
 
 import connectDB from './mongodb/connect.js';
-
+import cors from "cors";
 import AuthRoute from './Routes/AuthRoute.js'
 import UserRoute from './Routes/UserRoute.js'
 import PostRoute from './Routes/PostRoute.js'
@@ -12,7 +12,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json({ limit: '50mb' }));
-
+app.use(cors());
 
 
 app.get('/', async (req, res) => {
