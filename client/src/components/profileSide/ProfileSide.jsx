@@ -26,7 +26,7 @@ const ProfileSide = () => {
 
       {showProfile && (
         <div className="profile-container-mobile">
-          <ProfileCard />
+          <ProfileCard location='homepage' />
           <FollowersCard />
         </div>
       )}
