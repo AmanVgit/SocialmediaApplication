@@ -38,3 +38,32 @@
     gap: 1rem;
   }
 }
+
+.toggleProfileBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.arrow-up,
+.arrow-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.arrow-down {
+  border-top: 10px solid #333;
+  margin-left: 5px;
+}
+
+.arrow-up {
+  border-bottom: 10px solid #333;
+  margin-left: 10px;
+}
+
+

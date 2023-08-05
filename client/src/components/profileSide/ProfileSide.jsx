@@ -14,27 +14,28 @@ const ProfileSide = () => {
 
   return (
     <div className="ProfileSide">
-
-      {/* <div className="ProfileSide"> */}
-
       <LogoSearch />
 
       <button className="toggleProfileBtn" onClick={handleToggleProfile}>
-        Your Profile
+        {showProfile ? (
+          <span>
+            <span className="arrow-up" />
+          </span>
+        ) : (
+          <span>
+            <span className="arrow-down" />
+          </span>
+        )}
       </button>
-
 
       {showProfile && (
         <div className="profile-container-mobile">
-          <ProfileCard location='homepage' />
+          <ProfileCard location="homepage" />
           <FollowersCard />
         </div>
       )}
-
-      {/* </div>  */}
-
     </div>
-  )
-}
+  );
+};
 
-export default ProfileSide
+export default ProfileSide;
