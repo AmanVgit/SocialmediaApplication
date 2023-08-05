@@ -4,11 +4,11 @@ export const TrendData= [
       shares: 97,
     },
     {
-      name: "Avangers",
+      name: "Avengers",
       shares: 80.5,
     },
     {
-      name: "Zainkeepscode",
+      name: "Elon Musk",
       shares: 75.5,
     },
     {
@@ -16,7 +16,7 @@ export const TrendData= [
       shares: 72,
     },
     {
-      name: "Elon Musk",
+      name: "Badminton",
       shares: 71.9,
     },
     {
