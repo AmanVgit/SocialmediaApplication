@@ -1,7 +1,8 @@
 import axios from 'axios'
+const BASE_URL = process.env.REACT_APP_BASE_URL
 
 
-const API = axios.create({ baseURL: 'http://localhost:8000' });
+const API = axios.create({ baseURL: `${BASE_URL}` });
 
 export const getMessages = (id) => API.get(`/message/${id}`);
 
