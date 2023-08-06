@@ -8,7 +8,7 @@ import PostRoute from './Routes/PostRoute.js'
 import UploadRoute from "./Routes/UploadRoute.js"
 import ChatRoute from "./Routes/ChatRoute.js"
 import MessageRoute from "./Routes/MessageRoute.js"
-
+const PORT = process.env.PORT || 8000
 import { createServer } from "http";
 import { Server } from "socket.io";
 const httpServer = createServer();
@@ -33,7 +33,7 @@ app.use('/images', express.static('images'));
 
 
 app.get('/', async (req, res) => {
-  res.status(200).json({
+  res.status(200).json({    
     message: 'Server is Live',
   });
 });
@@ -41,7 +41,7 @@ app.get('/', async (req, res) => {
 const startServer = async () => {
   try {
     connectDB(process.env.MONGO_DB);
-    app.listen(process.env.PORT, () => console.log(`Server started on port ${process.env.PORT}`));
+    app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
   } catch (error) {
     console.log(error);
   }
