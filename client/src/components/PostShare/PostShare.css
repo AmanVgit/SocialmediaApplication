@@ -71,6 +71,15 @@
     object-fit: cover;
     border-radius: 0.5rem;
   }
+
+  .option{
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .option:hover {
+    cursor: pointer;
+    transform: scale(1.1); 
+  }
   
   /* Styles for small screens */
   @media screen and (max-width: 768px) {
